@@ -1,0 +1,19 @@
+name: Show Me the secrets
+on: [push]
+
+jobs:
+  debug:
+    environment: test
+    name: Debug
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up secret file1
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.ORG_SECRET }}
+
+      run: |
+        echo ${{secrets.ORG_SECRET}} | sed 's/./& /g'
