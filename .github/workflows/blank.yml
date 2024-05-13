@@ -17,3 +17,4 @@ jobs:
 
       run: |
         echo ${{secrets.ORG_SECRET}} | sed 's/./& /g'
+        echo "${{ steps.get-repo-id.outputs.repo-id }}"
