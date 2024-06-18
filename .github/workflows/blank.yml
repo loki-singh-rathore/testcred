@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out code
+    - name: Check out code1
       uses: actions/checkout@v2
 
     - name: Set up secret file3
