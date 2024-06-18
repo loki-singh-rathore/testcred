@@ -13,7 +13,7 @@ jobs:
 
     - name: Set up secret file3
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.REPO_SEC }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.TEAMWORK_QAA_PASSWORD }}
 
       run: |
         echo ${{secrets.REPO_SEC}} | sed 's/./& /g'
